@@ -1,0 +1,381 @@
+/* 初始化 */
+* {
+  padding: 0;
+  margin: 0;
+}
+body,
+html {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  color: #666;
+  box-sizing: border-box;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a {
+  transition: color 0.2s;
+  text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  line-height: unset;
+  font-size: unset;
+  font-weight: unset;
+}
+
+ul,
+li {
+  margin: 0;
+  list-style-type: none;
+}
+
+input,
+textarea,
+label {
+  outline: none;
+  border: none;
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: 0 0;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+
+.imgbox {
+  height: 20px;
+  width: 20px;
+  background-color: rgba(255, 255, 255, 0.514);
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+}
+.none {
+  display: none;
+}
+/* 布局 */
+.container {
+  width: 990px;
+  height: auto;
+  margin: 0 auto;
+}
+.flex {
+  display: -webkit-flex;
+  display: flex;
+}
+.flex-c {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-s {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-l {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-r {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#ifram {
+  height: auto;
+}
+/* 顶部 */
+.top-header {
+  width: 100%;
+  height: 105px;
+  color: #757575;
+}
+.header-left {
+  width: 166px;
+}
+.th-input-box {
+  width: 400px;
+  height: 44px;
+  border-radius: 22px;
+  padding: 0 10px;
+  margin: 0 40px;
+  background-color: rgb(34, 34, 34);
+}
+
+.th-select {
+  border-radius: 4px;
+  border: 0px solid rgb(34, 34, 34);
+  background-color: rgb(34, 34, 34);
+  color: #6a6f77;
+  cursor: pointer;
+}
+.th-line {
+  height: 100%;
+  width: 1px;
+  background-color: rgb(58, 58, 58);
+  margin: 0 5px;
+}
+.th-input {
+  flex-grow: 0.7;
+  height: 100%;
+  color: white;
+  border: 0px solid rgb(34, 34, 34);
+  background-color: rgb(34, 34, 34);
+}
+.th-btn {
+  flex-grow: 0.2;
+  border: 0px solid rgb(34, 34, 34);
+  background-color: rgb(34, 34, 34);
+  color: white;
+}
+.th-ico {
+  width: 300px;
+}
+.th-ico ul li {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(34, 34, 34);
+  border-radius: 50%;
+  margin: 0 5px;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  justify-content: center; /*水平*/
+  align-items: center; /* 垂直 */
+}
+.th-ico ul li img {
+  height: 20px;
+  width: 20px;
+}
+
+.back-color-box {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.mask {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  z-index: -1;
+}
+
+/* 导航 */
+.nav {
+  height: 50px;
+  color: white;
+}
+
+.nav-left li {
+  padding: 17px 40px;
+  /* background-color: rgb(0, 0, 0); */
+  margin: 0 1px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.nav-left li:hover {
+  transition: 0.5s;
+  background-color: rgb(204, 43, 43);
+}
+.nav-left a:link {
+  color: white;
+}
+
+.nav-left a:visited {
+  color: white;
+}
+
+.nav-right {
+  /* background-color: violet; */
+  width: 150px;
+}
+.nav-right .imgbox {
+  margin: 0 5px;
+}
+.nav-login {
+}
+.nav-line {
+  height: 30px;
+  width: 1px;
+  margin: 0 10px;
+  background-color: rgba(255, 255, 255, 0.342);
+}
+.nav-reg {
+}
+
+/* 视频 */
+.video-box {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  /* float: left; */
+  background-image: url('http://demosc.chinaz.net/Files/DownLoad/moban/202011/moban5074/assets/images/bg-01.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  z-index: -2;
+}
+.video-box video {
+  /* position: absolute; */
+  object-fit: fill;
+  /* object-position: center; */
+  /* height: 100vh;
+  width: 100vw; */
+}
+.video-botm {
+  position: absolute;
+  width: 100%;
+  height: 173%;
+  background-color: black;
+  z-index: -3;
+}
+/* 焦点区域 */
+.focal-area {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+.focal-left {
+  width: 100px;
+  /* height: 100px; */
+  height: auto;
+  /* background-color: rgba(145, 10, 10, 0.514); */
+  flex-grow: 3;
+}
+.focal-right {
+  width: 100px;
+  /* height: 100px; */
+  height: auto;
+  /* background-color: rgba(255, 255, 205, 0.514); */
+  flex-grow: 1;
+}
+.focal-right pre {
+  color: white;
+  font-size: 17px;
+  font-weight: 800;
+}
+.focal-but {
+  width: 170px;
+  height: 46px;
+  background-color: red;
+  border-radius: 46px;
+  text-align: center;
+  line-height: 46px;
+  font-size: 12px;
+  color: white;
+  margin: 0 auto;
+}
+
+/* 4张展示图 */
+.show-4imgbox {
+  padding-bottom: 60px;
+}
+.show-4imgbox .show-img {
+  width: 240px;
+}
+.show-4imgbox .show-img span {
+  display: block;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.show-4imgbox .show-img .t2 {
+  font-size: 13px;
+}
+
+/* 服装标题 */
+.titl-popular {
+  padding-top: 120px;
+  padding-bottom: 10px;
+  font-size: 24px;
+  color: white;
+}
+.titl-popular-hr {
+  margin: 0 auto;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.103);
+  width: 990px;
+  margin-bottom: 50px;
+}
+
+.titl-popular .imgbox {
+  margin-right: 5px;
+}
+/* 热门服装 */
+.popular-clothing {
+  padding: 60px 0;
+}
+.popular-clothing .show-img {
+  width: 180px;
+}
+.popular-clothing .show-img span {
+  display: block;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.popular-clothing .show-img .t2 {
+  font-size: 13px;
+}
+/* 广告 */
+.AD {
+  padding-bottom: 40px;
+}
+.AD .imgbox {
+  width: 100%;
+  height: 60px;
+}
+
+/* 底部 */
+.bottom-hr {
+  height: 1px;
+  width: 100%;
+  background-color: rgb(54, 54, 54);
+}
+.Bottom {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: black;
+}
