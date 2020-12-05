@@ -8,9 +8,13 @@ html {
   font-family: Arial, sans-serif;
   font-size: 15px;
   color: #666;
+  color: rgb(71, 71, 71);
   box-sizing: border-box;
+  transition: 1.5s;
 }
-
+body {
+  background-color: black;
+}
 a:focus {
   outline: none;
 }
@@ -85,11 +89,16 @@ img {
 .none {
   display: none;
 }
+.back-botm {
+  /* background-color: black; */
+  height: 100vh;
+}
 /* 布局 */
 .container {
-  width: 990px;
+  max-width: 1200px;
   height: auto;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .flex {
   display: -webkit-flex;
@@ -112,6 +121,10 @@ img {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  cursor: pointer;
+}
+.flex-l i {
+  font-size: 20px;
 }
 .flex-r {
   display: -webkit-flex;
@@ -191,7 +204,7 @@ img {
 }
 
 .mask {
-  height: 100vh;
+  height: 1000px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.35);
   position: absolute;
@@ -227,6 +240,12 @@ img {
   /* background-color: violet; */
   width: 150px;
 }
+.nav-right div {
+  cursor: pointer;
+}
+.nav-right i {
+  margin-right: 5px;
+}
 .nav-right .imgbox {
   margin: 0 5px;
 }
@@ -243,23 +262,33 @@ img {
 
 /* 视频 */
 .video-box {
-  height: 100vh;
+  min-height: 1000px;
   width: 100%;
   position: absolute;
-  /* float: left; */
   background-image: url('http://demosc.chinaz.net/Files/DownLoad/moban/202011/moban5074/assets/images/bg-01.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-
   z-index: -2;
 }
 .video-box video {
-  /* position: absolute; */
-  object-fit: fill;
-  /* object-position: center; */
-  /* height: 100vh;
-  width: 100vw; */
+  /* object-fit: fill; */
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  width: auto;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  width: auto;
+}
+.video-box video source {
+  height: 100%;
+  width: 100%;
 }
 .video-botm {
   position: absolute;
@@ -302,27 +331,30 @@ img {
   font-size: 12px;
   color: white;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 /* 4张展示图 */
 .show-4imgbox {
-  padding-bottom: 60px;
+  /* padding-bottom: 80px; */
 }
 .show-4imgbox .show-img {
-  width: 240px;
+  width: 23%;
+  cursor: pointer;
 }
+
 .show-4imgbox .show-img span {
   display: block;
   color: white;
   font-size: 24px;
   text-align: center;
-  margin-bottom: 5px;
+  /* margin-bottom: 15px; */
 }
 .show-4imgbox .show-img .t2 {
   font-size: 13px;
 }
 
-/* 服装标题 */
+/* 视频标题 */
 .titl-popular {
   padding-top: 120px;
   padding-bottom: 10px;
@@ -333,29 +365,56 @@ img {
   margin: 0 auto;
   height: 10px;
   background-color: rgba(255, 255, 255, 0.103);
-  width: 990px;
+  max-width: 1200px;
   margin-bottom: 50px;
 }
 
-.titl-popular .imgbox {
+.titl-popular i {
   margin-right: 5px;
+  cursor: pointer;
 }
-/* 热门服装 */
+/* 热门视频 */
 .popular-clothing {
   padding: 60px 0;
 }
 .popular-clothing .show-img {
-  width: 180px;
+  width: 30%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.popular-clothing .show-img img {
+  /* width: 390px; */
+}
+.popular-clothing .show-img:hover {
+  transition: 1s;
+  width: 35%;
+  background-color: rgba(0, 0, 0, 0.63);
 }
 .popular-clothing .show-img span {
   display: block;
   color: white;
-  font-size: 24px;
+  font-size: 13px;
   text-align: center;
   margin-bottom: 5px;
+  margin: 5px;
 }
 .popular-clothing .show-img .t2 {
   font-size: 13px;
+}
+.popular-clothing .barrage {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  /* pointer-events：none; */
+  pointer-events: none;
+  /* background-color: rgb(146, 146, 146); */
+}
+.popular-clothing .barrage marquee {
+  color: rgb(253, 253, 253);
+  transition: 0.5s;
+  font-size: 23px;
 }
 /* 广告 */
 .AD {
@@ -378,4 +437,130 @@ img {
   line-height: 100px;
   text-align: center;
   background-color: black;
+}
+
+/* login */
+.login-box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/img/19737.jpg');
+}
+.from-login {
+  min-width: 1150px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px 4px #0000004b;
+  background-color: rgb(255, 255, 255);
+}
+.from-login .left {
+  /* flex-grow: 1; */
+  width: 480px;
+  height: 100%;
+  background-color: rgb(127, 219, 255);
+  background-image: url('/img/bg-8a2fa02.jpg');
+  /* 对齐 */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* 背景遮罩 */
+  background-color: rgba(8, 8, 8, 0.295);
+  background-blend-mode: multiply;
+}
+
+.from-login .right {
+  flex-grow: 1;
+  /* width: 600px;1 */
+  height: 100%;
+  /* flex-basis:500px; */
+  /* background-color: rgb(127, 136, 255); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.from-login .right .login-input-box {
+  width: 90%;
+  height: 92%;
+  /* background-color: blanchedalmond; */
+}
+.login-input-box .input-text input {
+  width: 60%;
+  color: #aaa;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  font-style: italic;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 20px;
+  padding: 0 21px;
+  font-size: 14px;
+  font-family: inherit;
+}
+.login-input-box .switch {
+  padding: 20px 0;
+}
+.login-input-box .switch .active {
+  color: #e40914;
+  font-weight: 800;
+  font-size: 35px;
+}
+.login-input-box .switch span {
+  font-size: 25px;
+  cursor: pointer;
+}
+.login-input-box .title {
+  /* padding: 8px 0; */
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.login-input-box .input-text div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+.login-input-box .input-text div label {
+  cursor: pointer;
+}
+.login-input-box .input-text .login-input-checkbox {
+  width: 20px;
+  margin-right: 5px;
+  height: 15px;
+  /* cursor: pointer; */
+}
+.login-input-box .input-text label {
+  /* width: 20px; */
+  height: 30px;
+  line-height: 10px;
+}
+.login-input-box .login-input-btn {
+  background: #e40914;
+  color: #fff;
+  transition: all 0.2s;
+  line-height: 50px;
+  margin-bottom: 15px;
+  text-align: center;
+  cursor: pointer;
+  /* width: 100%; */
+  font-size: 16px;
+  font-weight: 500;
+  height: 50px;
+  border-radius: 30px;
+  transition: all 0.5s;
+  box-shadow: 5.7px 5.7px 15.7px 0.3px rgba(0, 0, 0, 0.12);
+  width: 60%;
+  padding: 0 21px;
+}
+.login-input-box .login-input-btn:hover {
+  background: #b4060f;
+  box-shadow: 6.7px 6.7px 15.7px 0.5px rgba(0, 0, 0, 0.12);
+}
+.login-input-box .forget-pasword {
+  margin-top: 50px;
+  color: rgb(146, 146, 146);
+  cursor: pointer;
 }
