@@ -285,7 +285,7 @@ img {
   min-height: 1000px;
   width: 100%;
   position: absolute;
-  background-image: url('http://demosc.chinaz.net/Files/DownLoad/moban/202011/moban5074/assets/images/bg-01.jpg');
+  background-image: url('../img/bg-01.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -467,7 +467,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/img/19737.jpg');
+  background-image: url('../img/19737.jpg');
 }
 .from-login {
   min-width: 1150px;
@@ -483,7 +483,7 @@ img {
   width: 480px;
   height: 100%;
   background-color: rgb(127, 219, 255);
-  background-image: url('/img/bg-8a2fa02.jpg');
+  background-image: url('../img/bg-8a2fa02.jpg');
   /* 对齐 */
   background-position: center center;
   background-size: cover;
