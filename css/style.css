@@ -12,7 +12,7 @@ html {
   box-sizing: border-box;
   transition: 1.5s;
 }
-body {
+#mbody {
   background-color: black;
 }
 a:focus {
@@ -72,7 +72,13 @@ textarea:focus {
   outline: 0;
   box-shadow: none;
 }
+a:link {
+  color: white;
+}
 
+a:visited {
+  color: white;
+}
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px #fff inset;
 }
@@ -88,6 +94,8 @@ img {
 }
 .none {
   display: none;
+  height: 0px;
+  overflow: hidden;
 }
 .back-botm {
   /* background-color: black; */
@@ -109,6 +117,18 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.flex-c-t {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.flex-c-b {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 .flex-s {
   display: -webkit-flex;
@@ -213,32 +233,32 @@ img {
 
 /* 导航 */
 .nav {
-  height: 50px;
+  /* height: 50px; */
   color: white;
 }
 
-.nav-left li {
-  padding: 17px 40px;
-  /* background-color: rgb(0, 0, 0); */
-  margin: 0 1px;
+.nav-left li i {
+  /* padding: 17px 40px; */
   cursor: pointer;
-  transition: 0.5s;
-}
-.nav-left li:hover {
-  transition: 0.5s;
-  background-color: rgb(204, 43, 43);
-}
-.nav-left a:link {
-  color: white;
+  /* transition: 0.5s; */
+  padding: 0 10px;
 }
 
-.nav-left a:visited {
-  color: white;
+/* .nav-a { */
+.nav-left a {
+  /* background-color: black; */
+  display: inline-block;
+  padding: 14px 20px;
+  margin: 0 5px;
+  /* width: 100%; */
 }
 
+.nav-left a:hover {
+  background-color: rgb(168, 27, 27);
+}
 .nav-right {
-  /* background-color: violet; */
   width: 150px;
+  font-size: 13px;
 }
 .nav-right div {
   cursor: pointer;
@@ -301,25 +321,25 @@ img {
 .focal-area {
   padding-top: 100px;
   padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  /* align-items: ; */
 }
 .focal-left {
   width: 100px;
-  /* height: 100px; */
   height: auto;
-  /* background-color: rgba(145, 10, 10, 0.514); */
   flex-grow: 3;
 }
 .focal-right {
   width: 100px;
-  /* height: 100px; */
-  height: auto;
-  /* background-color: rgba(255, 255, 205, 0.514); */
+  background-color: rgba(0, 0, 0, 0.514);
   flex-grow: 1;
 }
 .focal-right pre {
   color: white;
   font-size: 17px;
   font-weight: 800;
+  margin-top: 40px;
 }
 .focal-but {
   width: 170px;
@@ -389,6 +409,7 @@ img {
   transition: 1s;
   width: 35%;
   background-color: rgba(0, 0, 0, 0.63);
+  z-index: 99;
 }
 .popular-clothing .show-img span {
   display: block;
@@ -511,6 +532,9 @@ img {
 .login-input-box .switch span {
   font-size: 25px;
   cursor: pointer;
+  color: rgb(70, 70, 70);
+}
+.login-input-box .switch a {
 }
 .login-input-box .title {
   /* padding: 8px 0; */
@@ -559,8 +583,255 @@ img {
   background: #b4060f;
   box-shadow: 6.7px 6.7px 15.7px 0.5px rgba(0, 0, 0, 0.12);
 }
+.login-input-box .forget-pasword a {
+  color: #666;
+}
 .login-input-box .forget-pasword {
   margin-top: 50px;
   color: rgb(146, 146, 146);
   cursor: pointer;
+}
+/* 视频详情页面 */
+.introduced-backimg-box {
+  background-image: url('../img/wallhaven-k736q6.jpg');
+  height: 500px;
+  width: 100%;
+  position: absolute;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 150px;
+  z-index: -2;
+}
+
+.introduced-title {
+  margin-top: 100px;
+  padding-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.397);
+  text-align: center;
+  color: white;
+}
+.introduced-title h2 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+.introduced-title p {
+  max-width: 650px;
+  font-size: 15px;
+  margin: 0 auto;
+}
+.introduced-video {
+  /* height: 500px; */
+  margin-top: 100px;
+  background-color: rgba(0, 0, 0);
+}
+.introduced-body {
+  margin-top: 20px;
+  /* background-color: rgb(195, 205, 50); */
+  /* height: 500px; */
+}
+.introduced-body .left {
+  width: 280px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border: 1px rgb(236, 236, 236) solid;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+}
+.introduced-body .left img {
+  /* width: 280px; */
+  /* height: 352px; */
+}
+.introduced-body .left ul {
+  margin: 10px;
+}
+.introduced-body .left li {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.introduced-body .left li span:nth-child(1) {
+  font-weight: bold;
+  color: black;
+}
+.introduced-body .left li span:nth-child(2) {
+  color: rgb(100, 100, 100);
+}
+.introduced-body .left button {
+  width: 222px;
+  height: 46px;
+  background-color: #e40914;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  display: block;
+  margin: 30px auto 15px auto;
+  border-radius: 23px;
+}
+.introduced-body .left button:hover {
+  background-color: #f10f1b;
+}
+.introduced-body .right {
+  /* background-color: tomato; */
+  height: 100%;
+  padding-left: 30px;
+  flex: 1;
+}
+.introduced-body .right h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.introduced-body .right span {
+  display: inline-block;
+  word-spacing: 3px;
+  text-indent: 2em;
+  margin-bottom: 30px;
+}
+.introduced-body .right img {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* 联系我 */
+.contact-message {
+  flex-wrap: wrap;
+  padding-top: 100px;
+}
+.contact-message .icon-msg {
+  /* background-color: violet; */
+  margin: 3px;
+  height: 300px;
+  min-width: 300px;
+  width: 48%;
+  /* flex: 0.25; */
+}
+.contact-message {
+}
+.contact-message .icon-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-message .icon-msg i {
+  font-size: 90px;
+  color: rgb(99, 99, 99);
+}
+.contact-message .icon-msg h3 {
+  font-size: 1.3em;
+}
+.contact-message .icon-msg span {
+  width: 240px;
+  color: #757575;
+}
+.contact-hr {
+  background-color: #eee;
+  height: 1px;
+  margin: 50px 0;
+}
+.contact h2 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.contact span {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+.contact input,
+.contact textarea {
+  border: 1px solid #e1e1e1;
+  display: block;
+}
+.contact .h-input {
+  width: 100%;
+  /* background-color: ant  iquewhite; */
+  padding: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact .h-input input,
+.contact .h-input textarea {
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #aaa;
+}
+.contact .h-input .contact-subj {
+  width: 100%;
+}
+.contact .h-input textarea {
+  width: 100%;
+}
+.contact button {
+  min-width: 200px;
+  height: 60px;
+  width: 200px;
+  border-radius: 30px;
+  font-size: 15px;
+  color: white;
+  background-color: rgb(238, 54, 54);
+}
+
+.contact > div {
+  margin: 50px 0;
+}
+
+/* 全部类型的视频 */
+.all h2 {
+  font-size: 25px;
+  margin-top: 80px;
+}
+.all .classif ul {
+  width: 100%;
+  margin: 20px;
+}
+.all .classif ul li {
+  margin-right: 10px;
+  font-size: 18px;
+}
+.all .classif ul li.active {
+  margin-right: 10px;
+  font-size: 23px;
+  color: #e40914;
+  font-weight: bold;
+}
+.all .all-video {
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.all .all-video > div {
+  width: 23%;
+  height: 400px;
+  margin: 5px;
+  /* background-color: aquamarine; */
+}
+.all .all-video div img:hover {
+  width: 400px;
+}
+.all .pageing {
+  margin-bottom: 20px;
+}
+.all .pageing div {
+  width: 50px;
+  padding: 5px 15px;
+  margin: 0 10px;
+  cursor: pointer;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+  border: 1px beige solid;
+}
+.all .pageing div:hover {
+  background-color: #e40914;
+  color: white;
+}
+.all .pageing div:nth-child(1) {
+  /* background-color: rgb(127, 219, 255); */
+}
+.all .pageing div:nth-child(6) {
+}
+.all .pageing {
 }
