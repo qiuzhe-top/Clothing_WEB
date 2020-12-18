@@ -85,13 +85,16 @@
             <li>
               <a href="../index.html"><span>首页</span></a>
             </li>
+
             <li>
-              <a href="introduced.html">视频介绍</a>
+              <a href="all.html">视频大全</a>
             </li>
             <li>
-              <a href="all.html">视频大全</a></li>
+              <a href="blog.html">视频资讯</a>
+            </li>
             <li>
-              <a href="contact.html">联系我</a></li>
+              <a href="contact.html">联系我</a>
+            </li>
           </ul>
         </div>
         <div class="nav-right flex-c">
@@ -121,15 +124,15 @@
 
   <!-- </div> -->
   <div class="introduced-title container">
-    <h2>乳牙 Babyteeth (2019)</h2>
-    <p>一对夫妻发现重病的青春期女儿米拉爱上了一个毒贩，二人的关系成为了夫妻俩的噩梦。而...</p>
+    <h2 id="title"></h2>
+    <p id="title_msg"></p>
   </div>
 
 
   <div class="introduced-video container">
 
     <video width="100%" height="100%" controls>
-      <source src="../other/乳牙.mp4" type="video/mp4">
+      <source id="video_url" src="../other/乳牙.mp4" type="video/mp4">
     </video>
 
   </div>
@@ -137,47 +140,46 @@
 
   <div class="introduced-body container flex-c-t">
     <div class="left">
-      <img src="../img/luya.jpg" alt="">
+      <img id="posters" alt="">
       <ul>
         <li>
           <span>导演:</span>
-          <span>香农·墨菲</span>
+          <span id="director"></span>
         </li>
         <li>
           <span>编剧:</span>
-          <span>丽塔·卡内贾斯</span>
+          <span id="writers"></span>
         </li>
         <li>
           <span>类型:</span>
-          <span>剧情 / 喜剧</span>
+          <span id="type"></span>
         </li>
         <li>
           <span>语言:</span>
-          <span>英语</span>
+          <span id="language"></span>
         </li>
         <li>
           <span>片长:</span>
-          <span>120分钟</span>
+          <span id="time"></span>
         </li>
       </ul>
       <button>在线观看</button>
     </div>
     <div class="right">
       <h2>视频介绍</h2>
-      <span>我们知道，乳牙是人萌生的第一组牙，共20个，在人的青春期自6～7岁至12～13岁，乳牙逐渐脱落而被恒牙所替代。于是乳牙就是象征这一种青春的成长的意象。而这样意象尤为在中国农村家庭的风俗里更具有仪式感，如长辈们会对孩子们说，掉了的上颌的乳牙得往床底扔，掉了的下颌的乳牙就得往屋顶扔，且扔的时候得做出双脚合拼，做出虔诚的样子才扔出去，这样才会让恒牙长得比较整齐和坚固。这自然是农村习俗的繁琐，但也见得人们关于小孩青春健康成长的重视和美好祝愿。</span>
+      <span id="introduce1"></span>
 
-      <span> 说起关于青春成长的重视，国内有很多这方面题材的电影，如去年的《过春天》等，就是现实主义的佳作。而放眼国际电影市场，如在澳大利亚的的国度，关于青春成长电影，他们又是怎么拍的呢？</span>
+      <span id="introduce2"> </span>
       <h2>视频截图</h2>
 
-      <img src="../img/ly1.webp" alt="">
-      <img src="../img/ly2.webp" alt="">
-      <img src="../img/ly3.webp" alt="">
-      <img src="../img/ly4.webp" alt="">
-      <img src="../img/ly5.webp" alt="">
+      <img class="video_capture" alt="">
+      <img class="video_capture" alt="">
+      <img class="video_capture" alt="">
+      <img class="video_capture" alt="">
+      <img class="video_capture" alt="">
 
-      <span>
-        其中，青春成长电影《乳牙》是由澳大利导演珊农墨菲执导，伊莱扎斯坎伦、本门德尔森、托比华莱士、埃茜戴维斯、艾米丽巴克雷联袂主演的喜剧电影。该片也是利用乳牙这个青春成长的意象作为电影名字，赋予了一种明是喜剧暗示成长悲剧的电影，这部电影是导演关于小女主角的悲惨命运的处境做了一次艺术诗意和充满童真的处理，显得电影十分有看点。</span>
-
+      <span id="introduce3">
+      </span>
     </div>
   </div>
   <br>
@@ -187,12 +189,305 @@
   </div> -->
 
 
-  <!-- <div class="Bottom">
+  <div class="Bottom">
     Copyright © 2021.19510146 邹洋 Company name All rights reserved
-  </div> -->
+  </div>
 
   <!-- <iframe loop="loop" allow="autoplay" style="display:none" src="other/Thomas.mp3"></iframe> -->
+  <script src="../js/jquery.js"></script>
+  <script>
+    var list = {
+      'ly': {
+        'title': "乳牙 Babyteeth (2019)",
+        'title_msg': "一对夫妻发现重病的青春期女儿米拉爱上了一个毒贩，二人的关系成为了夫妻俩的噩梦。而...",
+        'video_url': "../other/乳牙.mp4",
+        'posters': "../img/luya.jpg",
+        'director': "香农·墨菲",
+        'writers': "丽塔·卡内贾斯",
+        'type': "剧情 / 喜剧",
+        'language': "英语",
+        'time': "120分钟",
+        'introduce1': "我们知道，乳牙是人萌生的第一组牙，共20个，在人的青春期自6～7岁至12～13岁，乳牙逐渐脱落而被恒牙所替代。于是乳牙就是象征这一种青春的成长的意象。而这样意象尤为在中国农村家庭的风俗里更具有仪式感，如长辈们会对孩子们说，掉了的上颌的乳牙得往床底扔，掉了的下颌的乳牙就得往屋顶扔，且扔的时候得做出双脚合拼，做出虔诚的样子才扔出去，这样才会让恒牙长得比较整齐和坚固。这自然是农村习俗的繁琐，但也见得人们关于小孩青春健康成长的重视和美好祝愿。",
+        'introduce2': "说起关于青春成长的重视，国内有很多这方面题材的电影，如去年的《过春天》等，就是现实主义的佳作。而放眼国际电影市场，如在澳大利亚的的国度，关于青春成长电影，他们又是怎么拍的呢？",
+        'introduce3': "其中，青春成长电影《乳牙》是由澳大利导演珊农墨菲执导，伊莱扎斯坎伦、本门德尔森、托比华莱士、埃茜戴维斯、艾米丽巴克雷联袂主演的喜剧电影。该片也是利用乳牙这个青春成长的意象作为电影名字，赋予了一种明是喜剧暗示成长悲剧的电影，这部电影是导演关于小女主角的悲惨命运的处境做了一次艺术诗意和充满童真的处理，显得电影十分有看点。",
+        'video_capture': [
+          '../img/ly1.webp',
+          '../img/ly2.webp',
+          '../img/ly3.webp',
+          '../img/ly4.webp',
+          '../img/ly5.webp',
+        ],
+      },
+      // 阿丽塔：战斗天使
+      'Alita': {
+        'title': "阿丽塔：战斗天使",
+        'title_msg': "故事发生在遥远的26世纪，外科医生依德在垃圾场里捡到了只剩下头部的机械少女",
+        'video_url': "../other/乳牙.mp4",
+        'posters': "../img/alt0.jpg",
+        'director': "罗伯特·罗德里",
+        'writers': "詹姆斯·卡梅隆",
+        'type': "动作 冒险 科幻",
+        'language': "英语",
+        'time': "122分钟",
+        'introduce1': "故事发生在遥远的26世纪，外科医生依德（克里斯托弗·瓦尔兹 Christoph Waltz 饰）在垃圾场里捡到了只剩下头部的机械少女将她带回家中，给她装上了本来为自己已故的女儿所准备的义体，并取名阿丽塔（罗莎·萨拉扎尔 Rosa Salazar 饰）。苏醒后的阿丽塔对这个五彩斑斓但却暴力而又残酷的世界产生了浓厚的兴趣，在结识了青年雨果（基恩·",
+        'introduce2': "约翰逊 Keean Johnson 饰）后，阿丽塔开始接触名为机动球的运动，并在比赛中展现出了惊人的格斗天赋。 在废铁城居民们的头顶，漂浮着巨大的浮空城市撒冷，废铁城居民们的一切劳作和付出，都是为了给撒冷提供继续运作的燃料。",
+        'introduce3': "在大财阀维克特（马赫沙拉·阿里 Mahershala Ali 饰）所设立的机动球比赛中，最终获得冠军的人能够获得前往撒冷生活的资格，阿丽塔决定利用自己的格斗天赋参加比赛，却被卷入了一个巨大的阴谋之中。",
+        'video_capture': [
+          '../img/alt1.jpg',
+          '../img/alt2.jpg',
+          '../img/alt3.jpg',
+          '../img/alt4.jpg',
+          '../img/alt5.jpg',
+        ],
+      },
+      // 阿拉丁
+      'ald': {
+        'title': "阿拉丁",
+        'title_msg': "在充满异域风情的古代阿拉伯王国，善良的穷小子阿拉丁（莫纳·马苏德 饰）和勇敢的茉莉公主",
+        'video_url': "../other/乳牙.mp4",
+        'posters': "../img/ald0.jpg",
+        'director': "盖·里奇",
+        'writers': "梅纳·玛索德",
+        'type': "爱情 奇幻 冒险",
+        'language': "英语",
+        'time': "128分钟",
+        'introduce1': "2019年电影《阿拉丁(Aladdin)》共128分钟左右，由盖·里奇执导，盖·里奇、约翰·奥古斯特编写的爱情奇幻冒险故事，主演有梅纳·玛索德、娜奥米·斯科特、威尔·史密斯、马尔万·肯扎里、纳维德·内加班等，该剧已于2019-05-24在美国区域上映。",
+        'introduce2': "影片《阿拉丁真人版》主要讲述了在充满异域风情的古代阿拉伯王国，善良的穷小子阿拉丁（莫纳·马苏德 饰）和勇敢的茉莉公主（娜奥米·斯科特 饰）浪漫邂逅，在可以满足主人三个愿望的神灯精灵（威尔·史密斯 饰）的帮助下，两人踏上了一次寻找真爱和自我的魔幻冒险。",
+        'introduce3': "在充满异域风情的古代阿拉伯王国，善良的穷小子阿拉丁（莫纳·马苏德 饰）和勇敢的茉莉公主（娜奥米·斯科特 饰）浪漫邂逅，在可以满足主人三个愿望的神灯精灵帮助下，两人踏上了一次寻找真爱和自我的魔幻冒险。",
+        'video_capture': [
+          '../img/ald1.jpg',
+          '../img/ald2.jpg',
+          '../img/ald3.jpg',
+          '../img/ald4.jpg',
+          '../img/ald5.jpg',
+        ],
+      },
+      //hbsyx
+      'hbsyx': {
+        'title': "速度与激情：特别行动",
+        'title_msg': "狂野时速：双雄联盟(港) / 玩命关头：特别行动(台) / 霍布斯与肖",
+        'video_url': "../other/乳牙.mp4",
+        'posters': "../img/hbsyx0.webp",
+        'director': "大卫·雷奇",
+        'writers': "克里斯·摩根 ",
+        'type': "动作 犯罪",
+        'language': "英语",
+        'time': "137分钟",
+        'introduce1': "一个是美国外交安全局的忠诚特工、身材魁梧的执法者霍布斯（强森饰），一个是前英国军事特工精英、无法无天的恶棍肖（斯坦森饰）。在2015年的《速度与激情7》中首次对峙之后，两人不论言语还是肢体都冲突不断，一直试图打倒对方",
+        'introduce2': "然而，通过高科技进行了基因增强的无政府主义者布里克斯顿（伊德瑞斯·艾尔巴饰）控制了一种可能永远改变人类命运的不为人知的生化武器，并且还打败了一位大胆优秀又特立独行的军情六处特工（曾出演《王冠》的凡妮莎·科比饰）——她恰好是肖的妹妹，为了扳倒这个世界上唯一可能比他们更厉害的敌人，这两个不共戴天的宿敌不得不联手",
+        'introduce3': "《速度与激情：特别行动》一片在《速度与激情》系列的宇宙中推开了一扇全新的大门。从洛杉矶到伦敦，从切尔诺贝利的有毒废墟到美丽的南太平洋岛国萨摩亚，本次特别行动席卷全球。",
+        'video_capture': [
+          '../img/hbsyx1.webp',
+          '../img/hbsyx2.webp',
+          '../img/hbsyx3.webp',
+          '../img/hbsyx4.webp',
+          '../img/hbsyx5.webp',
+        ],
+      },
+      // 我也许会摧毁你 wyxhchn
+      'wyxhchn': {
+        'title': "我也许会摧毁你",
+        'title_msg': "Arabella Essiedu本是一位无忧无虑、自信开朗的伦敦女孩，她的文章在互联网上广受好评，被称赞为“她那一代的声音”",
+        'video_url': "../other/乳牙.mp4",
+        'posters': "../img/wyxhchn0.jpg",
+        'director': "阿梅尔·艾米恩",
+        'writers': "亚当·詹姆斯",
+        'type': "欧美剧",
+        'language': "英语",
+        'time': "全12集",
+        'introduce1': "Arabella Essiedu本是一位无忧无虑、自信开朗的伦敦女孩，她的文章在互联网上广受好评，被称赞为“她那一代的声音”。正当Arabella的写作事业蒸蒸日上时，她在一家夜店里被人下药性侵，这让她的生活发生了不可逆转的变化。Arabella不得不努力地去面对已经发生的事情，她重新审视起自己的事业、朋友和家人，开始了一场自我发现之旅。",
+        'introduce2': "",
+        'introduce3': "",
+        'video_capture': [
+          '../img/wyxhchn1.jpg',
+          '../img/wyxhchn2.jpg'
+          // '../img/ald3.jpg',
+          // '../img/ald4.jpg',
+          // '../img/ald5.jpg',
+        ],
+      },
+      // 无暇赴死
+      'wxfs': {
+        'title': "007：无暇赴死 No Time to Die",
+        'title_msg': "“詹姆斯·邦德系列电影”的第二十五部电影，由凯瑞·福永执导。电影主演包括丹尼尔·克雷格、拉尔夫·费因斯、娜奥米·哈里斯、雷米·马利克、蕾雅·赛杜、本·威士肖和杰佛瑞·怀特",
+        'video_url': "../other/乳牙.mp4",
+        'posters': "../img/wxfs0.webp",
+        'director': "凯瑞·福永",
+        'writers': "伊恩·弗莱明",
+        'type': "动作 / 惊悚 / 冒险",
+        'language': "英语",
+        'time': "全12集",
+        'introduce1': "“詹姆斯·邦德系列电影”的第二十五部电影，由凯瑞·福永执导。电影主演包括丹尼尔·克雷格、拉尔夫·费因斯、娜奥米·哈里斯、雷米·马利克、蕾雅·赛杜、本·威士肖和杰佛瑞·怀特。",
+        'introduce2': "",
+        'introduce3': "",
+        'video_capture': [
+          '../img/wxfs1.webp',
+          '../img/wxfs2.webp',
+          '../img/wxfs3.webp',
+          '../img/wxfs4.webp',
+          '../img/wxfs5.webp',
+        ],
+      },
+      // 伤心画廊 sxhl
+      'sxhl': {
+        'title': "伤心画廊 The Broken Heart Gallery",
+        'title_msg': "故事讲述露西天生就是一名收藏家，她与男友分手，而男友是惠特尼博物馆的老板",
+        'video_url': "../other/乳牙.mp4",
+        'posters': "../img/sxhl0.webp",
+        'director': "纳塔利·克林斯基",
+        'writers': "纳塔利·克林斯基",
+        'type': "爱情",
+        'language': "英语",
+        'time': "108分钟",
+        'introduce1': "“詹姆斯·邦德系列电影”的第二十五部电影，由凯瑞·福永执导。电影主演包括丹尼尔·克雷格、拉尔夫·费因斯、娜奥米·哈里斯、雷米·马利克、蕾雅·赛杜、本·威士肖和杰佛瑞·怀特。",
+        'introduce2': "",
+        'introduce3': "",
+        'video_capture': [
+          '../img/sxhl1.webp',
+          '../img/sxhl2.webp',
+          '../img/sxhl3.webp',
+          '../img/sxhl4.webp',
+          '../img/sxhl5.webp',
+        ],
+      },
+      // 敢梦有爱 gmya
+      'gmya': {
+        'title': "敢梦有爱 The Secret: Dare to Dream ",
+        'title_msg': "改编自全球畅销励志作品《秘密》。故事描述独自扶养三个孩子的寡妇米兰达（凯蒂荷姆丝 饰）在一场风暴过后，雇用了一名水电工布雷（乔许卢卡斯 饰）修缮受损的住家",
+        'video_url': "../other/乳牙.mp4",
+        'posters': "../img/gmya0.webp",
+        'director': "安迪·坦纳特",
+        'writers': "纳塔利·克林斯基",
+        'type': "爱情",
+        'language': "英语",
+        'time': "108分钟",
+        'introduce1': "“詹姆斯·邦德系列电影”的第二十五部电影，由凯瑞·福永执导。电影主演包括丹尼尔·克雷格、拉尔夫·费因斯、娜奥米·哈里斯、雷米·马利克、蕾雅·赛杜、本·威士肖和杰佛瑞·怀特。",
+        'introduce2': "",
+        'introduce3': "",
+        'video_capture': [
+          '../img/gmya1.webp',
+          '../img/gmya2.webp',
+          '../img/gmya3.jpg',
+          '../img/gmya4.jpg',
+          '../img/gmya5.jpg',
+        ],
+      },
+      // 比尔和泰德寻歌记 behtd
+      'behtd': {
+        'title': "比尔和泰德寻歌记",
+        'title_msg': "改编自全球畅销励志作品《秘密》。故事描述独自扶养三个孩子的寡妇米兰达（凯蒂荷姆丝 饰）在一场风暴过后，雇用了一名水电工布雷（乔许卢卡斯 饰）修缮受损的住家",
+        'video_url': "../other/乳牙.mp4",
+        'posters': "../img/ehtd0.webp",
+        'director': "迪恩·帕里索",
+        'writers': "克里斯·马瑟森 / 艾德·索罗门",
+        'type': "喜剧 / 科幻 / 音乐",
+        'language': "英语",
+        'time': "108分钟",
+        'introduce1': "此前基努·里维斯、亚历克斯·温特已确认联手回归喜剧[比尔和泰德]系列第三部[比尔和泰德寻歌记]，导演迪恩·帕里索特，该系列原编剧克里斯·马瑟森、艾德·索罗门操刀剧本。但近日里维斯却对该片能否如期而至表示不太确定。里维斯是在接受“雅虎娱乐”采访时透露的这一消息，他称由于一些幕后问题，该片能否照原计划进行现在并不确定。里维斯表示：“我们为这部片子已经等了很长时间，但现在还是存在一些‘挑战’。我很喜欢这个系列的这些角色，新片剧本已经就绪，故事很棒，但在‘资金、版权、合同’上还存在一些问题",
+        'introduce2': "比尔和泰德]系列前两部[比尔和泰德历险记]、[比尔和泰德畅游鬼门关]分别于1989年、1991年上映，讲述了两个高中生穿越时空经历冒险的故事。新片则围绕两个已人到中年的好友再次开启时空探险、寻找“救命歌曲”展开。米高梅负责北美发行。",
+        'introduce3': "",
+        'video_capture': [
+          '../img/ehtd1.webp',
+          '../img/ehtd2.webp',
+          '../img/ehtd3.webp',
+          '../img/ehtd4.webp',
+          '../img/ehtd5.webp',
+        ],
+      },
+      // 如何培养一个女孩 rhpy
+      'rhpy': {
+        'title': "如何培养一个女孩",
+        'title_msg': "　1990年代的北英格兰小镇，一个少女想当音乐记者，而她朴素害羞的风格跟乐队、演出格格不入。但某天，她摇身一变成为“朵丽·王尔德第二”，",
+        'video_url': "../other/乳牙.mp4",
+        'posters': "../img/如何培养一个女孩.jpg",
+        'director': "迪恩·帕里索",
+        'writers': "克里斯·马瑟森 / 艾德·索罗门",
+        'type': "喜剧 / 科幻 / 音乐",
+        'language': "英语",
+        'time': "108分钟",
+        'introduce1': "1990年代的北英格兰小镇，一个少女想当音乐记者，而她朴素害羞的风格跟乐队、演出格格不入。但某天，她摇身一变成为“朵丽·王尔德第二”，以一个彩色头发、华丽张扬的新锐写手形象打进了那个圈子。但新生活也带给了她五味杂陈的新感悟…",
+        'introduce2': "",
+        'introduce3': "",
+        'video_capture': [
+          '../img/rhpy1.webp',
+          '../img/rhpy2.webp',
+          '../img/rhpy3.webp',
+          '../img/rhpy4.webp',
+          '../img/rhpy5.webp',
+        ],
+      },
+      // 若能与你共乘海浪之上 rnyn
+      'rnyn': {
+        'title': "若能与你共乘海浪之上 きみと、波にのれたら ",
+        'title_msg': "浪尖上的约定(港) / 乘浪之约(台) / 若能与你乘风破浪 / 若能和你共乘波浪 / 若能与你共乘波浪 / 若与你共乘海浪之上 / 你和我，如果被海浪吞没 / If Riding a Wave, with You / Ride Your Wave",
+        'video_url': "../other/乳牙.mp4",
+        'posters': "../img/若能与你共乘海浪之上.jpg",
+        'director': " 汤浅政明",
+        'writers': "吉田玲子",
+        'type': "爱情 / 动画 / 奇幻",
+        'language': "英语",
+        'time': "108分钟",
+        'introduce1': "夏天、阳光，沙滩、海浪，青年消防员雏罂粟港和爱好冲浪的向水日菜子相遇并迅速展开热恋。看似命中注定的这对恋人，却不幸遭遇生死别离。无法接受港已经离世的雏子，某天突然发现，只要唱起属于两个人的那首歌，港就会从水中出现……",
+        'introduce2': "",
+        'introduce3': "",
+        'video_capture': [
+          '../img/rnyn1.webp',
+          '../img/rnyn2.webp',
+          '../img/rnyn3.webp',
+          '../img/rnyn4.webp',
+          '../img/rnyn5.webp',
+        ],
+      },
+    }
 
+    // 获取url参数
+    function getQueryVariable(variable) {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (pair[0] == variable) { return pair[1]; }
+      }
+      return (false);
+    }
+
+
+    var qname = getQueryVariable("name")
+    var datas = list[qname]
+    // 标题
+    document.getElementById('title').innerHTML = datas['title']
+    //标题描述
+    document.getElementById('title_msg').innerHTML = datas['title_msg']
+    // 海报
+    document.getElementById('posters').src = datas['posters']
+    // 导演
+    document.getElementById('director').innerHTML = datas['director']
+    // 编剧
+    document.getElementById('writers').innerHTML = datas['writers']
+    // 类型
+    document.getElementById('type').innerHTML = datas['type']
+    // 语言
+    document.getElementById('language').innerHTML = datas['language']
+    // 片长
+    document.getElementById('time').innerHTML = datas['time']
+    // 视频介绍1
+    document.getElementById('introduce1').innerHTML = datas['introduce1']
+    // 视频介绍2
+    document.getElementById('introduce2').innerHTML = datas['introduce2']
+    // 视频介绍3
+    document.getElementById('introduce3').innerHTML = datas['introduce3']
+
+    var video_url = document.getElementById('video_url') // 视频地址
+    var video_capture = document.getElementsByClassName("video_capture") // 视频截图
+
+    video_url.src = datas['video_url']
+
+    for (var i = 0; i < video_capture.length; i++) {
+      video_capture[i].src = datas['video_capture'][i]
+    }
+
+      // video_capture.src = datas['video_capture']
+  </script>
 </body>
 
 </html>

@@ -7,8 +7,20 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/color_style.css">
   <link rel="stylesheet" href="css/iconfont.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <script src="js/jquery-1.8.3.min.js"></script>
   <script src="js/js.js"></script>
+  <script>
+    $(function () {
+      $('.video-box').addClass('animated fadeIn');
+      $('.focal-area').addClass('animated  fadeInDownBig');
+      $('.top-header').addClass('animated bounceInDown');
+      $('.nav').addClass('animated flash');
+      $('.show-4imgbox').addClass('animated flipInX');
+    });
+  </script>
   <title>ZHE电影</title>
+  <!-- http://demosc.chinaz.net/Files/DownLoad/moban/202011/moban5074/ -->
 </head>
 
 <body id="mbody">
@@ -97,13 +109,16 @@
             <li>
               <a href="../index.html">首页</a>
             </li>
+
             <li>
-              <a href="page/introduced.html">视频介绍</a>
+              <a href="page/all.html">视频大全</a>
             </li>
             <li>
-              <a href="page/all.html">视频大全</a></li>
+              <a href="page/blog.html">视频资讯</a>
+            </li>
             <li>
-              <a href="page/contact.html">联系我</a></li>
+              <a href="page/contact.html">联系我</a>
+            </li>
           </ul>
         </div>
         <div class="nav-right flex-c">
@@ -151,34 +166,42 @@
     他将和过去的所作所为
     受过的一切苦难，彻底做个了断
       </pre>
-      <div class="focal-but">立即观看</div>
+      <a href="page/introduced.html?name=wxfs">
+        <div class="focal-but">立即观看</div>
+      </a>
     </div>
   </div>
 
   <!-- 开始的4张主图 -->
   <div class="show-4imgbox container flex-s">
-
     <div class="show-img">
-      <img src="img/dh1.jpg" alt="">
-      <span class="t1">Alita:战斗天使</span>
-      <span class="t2">电影/动作/ 2020</span>
+      <a href="page/introduced.html?name=Alita">
+        <img src="img/dh1.jpg" alt="">
+        <span class="t1">Alita:战斗天使</span>
+        <span class="t2">电影/动作/ 2020</span>
+      </a>
     </div>
     <div class="show-img">
-      <img src="img/dh2.jpg" alt="">
-      <span class="t1">霍布斯和肖</span>
-      <span class="t2">电影/动作/ 2020</span>
+      <a href="page/introduced.html?name=hbsyx">
+        <img src="img/dh2.jpg" alt="">
+        <span class="t1">速度与激情：特别行动</span>
+        <span class="t2">电影/动作/ 2020</span>
+      </a>
     </div>
     <div class="show-img">
-      <img src="img/dh3.jpg" alt="">
-      <span class="t1">我也许会摧毁你</span>
-      <span class="t2">电影/戏剧 2020</span>
+      <a href="page/introduced.html?name=wyxhchn">
+        <img src="img/dh3.jpg" alt="">
+        <span class="t1">我也许会摧毁你</span>
+        <span class="t2">电影/戏剧 2020</span>
+      </a>
     </div>
     <div class="show-img">
-      <img src="img/dh4.jpg" alt="">
-      <span class="t1">阿拉丁</span>
-      <span class="t2">电影/幻想 2020</span>
+      <a href="page/introduced.html?name=ald">
+        <img src="img/dh4.jpg" alt="">
+        <span class="t1">阿拉丁</span>
+        <span class="t2">电影/幻想 2020</span>
+      </a>
     </div>
-
   </div>
 
   <!-- <div class="back-botm"> -->
@@ -225,19 +248,25 @@
       <marquee behavior="" direction="" truespeed scrollamount="6" scrolldelay="35"></marquee>
     </div>
     <div class="show-img">
-      <img src="img/luya.jpg" alt="" onmouseover="over('#51acb5')" onmouseleave="leave(this)">
-      <span class="t1">乳牙 / 谢谢你爱过我(台)</span>
-      <span class="t2">澳大利亚, 2019</span>
+      <a href="page/introduced.html?name=ly">
+        <img src="img/luya.jpg" alt="" onmouseover="over('#51acb5')" onmouseleave="leave(this)">
+        <span class="t1">乳牙 / 谢谢你爱过我(台)</span>
+        <span class="t2">澳大利亚, 2019</span>
+      </a>
     </div>
     <div class="show-img">
-      <img src="img/The Broken Heart Gallery.jpg" alt="" onmouseover="over('#ed569d')" onmouseleave="leave(this)">
-      <span class="t1">伤心画廊</span>
-      <span class="t2">国,加拿大, 2020</span>
+      <a href="page/introduced.html?name=sxhl">
+        <img src="img/The Broken Heart Gallery.jpg" alt="" onmouseover="over('#ed569d')" onmouseleave="leave(this)">
+        <span class="t1">伤心画廊</span>
+        <span class="t2">国,加拿大, 2020</span>
+      </a>
     </div>
     <div class="show-img">
-      <img src="img/敢梦有爱.jpg" alt="" onmouseover="over('#cc7c37')" onmouseleave="leave(this)">
-      <span class="t1">敢梦有爱</span>
-      <span class="t2">剧情 / 爱情, 2020</span>
+      <a href="page/introduced.html?name=gmya">
+        <img src="img/敢梦有爱.jpg" alt="" onmouseover="over('#cc7c37')" onmouseleave="leave(this)">
+        <span class="t1">敢梦有爱</span>
+        <span class="t2">剧情 / 爱情, 2020</span>
+      </a>
     </div>
   </div>
   <div class="popular-clothing container flex-s">
@@ -268,26 +297,32 @@
       <marquee behavior="" direction="" truespeed scrollamount="6" scrolldelay="35"></marquee>
     </div>
     <div class="show-img">
-      <img src="img/比尔和泰德寻歌记.jpg" alt="" onmouseover="over('#0a1540')" onmouseleave="leave(this)">
-      <span class="t1">比尔和泰德寻歌记</span>
-      <span class="t2">喜剧 / 科幻 / 音乐, 2020</span>
+      <a href="page/introduced.html?name=behtd">
+        <img src="img/比尔和泰德寻歌记.jpg" alt="" onmouseover="over('#0a1540')" onmouseleave="leave(this)">
+        <span class="t1">比尔和泰德寻歌记</span>
+        <span class="t2">喜剧 / 科幻 / 音乐, 2020</span>
+      </a>
     </div>
     <div class="show-img">
-      <img src="img/如何培养一个女孩.jpg" alt="" onmouseover="over('#f47f8c')" onmouseleave="leave(this)">
-      <span class="t1">如何培养一个女孩</span>
-      <span class="t2">青春期少女的养成方法, 2020</span>
+      <a href="page/introduced.html?name=rhpy">
+        <img src="img/如何培养一个女孩.jpg" alt="" onmouseover="over('#f47f8c')" onmouseleave="leave(this)">
+        <span class="t1">如何培养一个女孩</span>
+        <span class="t2">青春期少女的养成方法, 2020</span>
+      </a>
     </div>
     <div class="show-img">
-      <img src="img/若能与你共乘海浪之上.jpg" alt="" onmouseover="over('#21ace6')" onmouseleave="leave(this)">
-      <span class="t1">若能与你共乘海浪之上</span>
-      <span class="t2">FEBRUARY 10, 2020</span>
+      <a href="page/introduced.html?name=rnyn">
+        <img src="img/若能与你共乘海浪之上.jpg" alt="" onmouseover="over('#21ace6')" onmouseleave="leave(this)">
+        <span class="t1">若能与你共乘海浪之上</span>
+        <span class="t2">FEBRUARY 10, 2020</span>
+      </a>
     </div>
   </div>
 
   <!-- 广告 -->
-  <div class="AD container">
+  <div id="AD" class="AD container">
     <!-- <div class="imgbox"></div> -->
-    <img src="https://i0.hdslb.com/bfs/sycp/creative_img/202011/3d71d46473b10273ccbf9d050c42a92a.jpg" alt="" srcset="">
+    <img src="img/gg.jpg" alt="" srcset="">
   </div>
 
   <!-- </div> -->

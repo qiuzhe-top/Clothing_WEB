@@ -1,3 +1,11 @@
-.back-color1{
+.back-color1 {
   background-color: black;
+}
+
+.blog .left {
+  /* background-color: yellowgreen; */
+}
+
+.blog .right {
+  /* background-color: rgb(50, 205, 58); */
 }
